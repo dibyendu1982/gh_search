@@ -1,6 +1,6 @@
 # GitHub Repository Search Tool
 
-This Python script searches for specific strings across all repositories in the Vacasa GitHub organization and returns the URLs of repositories where the strings are found.
+This Python script searches for specific strings across all repositories in the my-org GitHub organization and returns the URLs of repositories where the strings are found.
 
 ## Setup
 
@@ -50,7 +50,7 @@ python github_repo_search.py --strings "react" "django" "postgresql"
 
 ## Features
 
-- ✅ Searches across all repositories in the Vacasa organization
+- ✅ Searches across all repositories in the my-org organization
 - ✅ Uses GitHub's code search API for efficient searching
 - ✅ Handles rate limiting and API errors gracefully
 - ✅ Displays results with repository URLs and found strings

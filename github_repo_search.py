@@ -2,7 +2,7 @@
 """
 GitHub Repository Search Script
 
-This script searches for specific strings across all repositories in the Vacasa organization
+This script searches for specific strings across all repositories in the my-org organization
 and returns the URLs of repositories where the strings are found.
 
 Requirements:
@@ -32,7 +32,7 @@ class GitHubRepoSearcher:
             ignore_patterns (List[str]): List of patterns to ignore (file extensions, paths, etc.)
         """
         self.github = Github(token)
-        self.org_name = "vacasa"
+        self.org_name = "my-org"
         self.ignore_patterns = ignore_patterns or []
         
     def _build_ignore_query(self) -> str:
@@ -63,7 +63,7 @@ class GitHubRepoSearcher:
         
     def get_organization_repos(self) -> List:
         """
-        Get all repositories from the Vacasa organization.
+        Get all repositories from the my-org organization.
         
         Returns:
             List of repository objects
@@ -176,7 +176,7 @@ class GitHubRepoSearcher:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Search for strings in Vacasa GitHub repositories")
+    parser = argparse.ArgumentParser(description="Search for strings in my-org GitHub repositories")
     parser.add_argument("--token", help="GitHub personal access token (or set GITHUB_TOKEN env var)")
     parser.add_argument("--strings", nargs="+", required=True, 
                        help="Strings to search for (space-separated)")
@@ -197,7 +197,7 @@ def main():
     ignore_patterns = args.ignore
     
     print(f"Searching for strings: {search_strings}")
-    print("Organization: vacasa")
+    print("Organization: my-org")
     if ignore_patterns:
         print(f"Ignoring patterns: {ignore_patterns}")
     print("=" * 50)

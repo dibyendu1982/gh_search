@@ -30,7 +30,7 @@ def main():
         ".circleci"    # Ignore .circleci folder
     ]
     
-    print("Starting search for configuration-related strings in Vacasa repositories...")
+    print("Starting search for configuration-related strings in my-org repositories...")
     print(f"Search terms: {search_strings}")
     print(f"Ignoring patterns: {ignore_patterns}")
     print("=" * 60)
